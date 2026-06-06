@@ -267,7 +267,7 @@ void model::train(string path)
     // 2. 合并 preterm_freq
     merge_freq_map(preterm_freq, rank, size);
 
-    // 3-5. 合并 letters/digits/symbols（按 length 合并，type 字段正确设置）
+    // 合并 letters/digits/symbols
     merge_segments_by_length(letters, letters_freq, 1, rank, size);
     merge_segments_by_length(digits, digits_freq, 2, rank, size);
     merge_segments_by_length(symbols, symbols_freq, 3, rank, size);
